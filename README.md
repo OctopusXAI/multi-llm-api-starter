@@ -34,4 +34,4 @@ print(gem_res)
 - model_name: Specify target LLM model
 - prompt: Input query for model generation
 - Return: Raw text output from LLM
-``` 
+  
