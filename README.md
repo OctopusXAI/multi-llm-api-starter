@@ -1,9 +1,7 @@
 ## Install Dependencies
-
-​```bash
+```bash
 pip install openai google-generativeai
-​```
-
+```
 ## Env Config
 
 ​```bash
