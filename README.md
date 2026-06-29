@@ -1,42 +1,39 @@
-# multi-llm-api-starter
-A lightweight unified API starter, use single API key to request GPT-5 / Gemini 3 / MiniMax simultaneously.
+## Install Dependencies
 
-## Features
-- Single key management for 3 mainstream LLMs
-- OpenAI compatible request format
-- Simple switch model without rewriting request logic
-- Minimal dependency, fast deployment
+​```bash
+pip install openai google-generativeai
+​```
 
-## Quick Start Code Example
-```python
-from openai import OpenAI
+## Env Config
 
-# Unified endpoint & global key
-client = OpenAI(
-    api_key="YOUR_UNIFIED_KEY",
-    base_url="https://octopusx.ai/v1"
-)
+​```bash
+# Mac / Linux
+export OPENAI_API_KEY=your_key_here
+export GEMINI_API_KEY=your_key_here
 
-# Call GPT-5
-gpt_response = client.chat.completions.create(
-    model="gpt-5",
-    messages=[{"role": "user", "content": "your prompt"}]
-)
+# Windows CMD
+set OPENAI_API_KEY=your_key_here
+set GEMINI_API_KEY=your_key_here
+​```
 
-# Call Gemini 3
-gemini_response = client.chat.completions.create(
-    model="gemini-3",
-    messages=[{"role": "user", "content": "your prompt"}]
-)
+## Local Client Usage (unified_llm_client.py)
 
-# Call MiniMax
-minimax_response = client.chat.completions.create(
-    model="minimax-01",
-    messages=[{"role": "user", "content": "your prompt"}]
-)
+​```python
+from unified_llm_client import UnifiedLLMClient
 
-print(gpt_response.choices[0].message.content)
-Links
-Official Site: https://octopusx.ai
-Documentation: https://doc.octopusx.ai/en
-Contact: hello@octopusx.ai
+client = UnifiedLLMClient()
+
+# Call OpenAI GPT
+gpt_res = client.chat("gpt-4o", "your question")
+print(gpt_res)
+
+# Call Google Gemini
+gem_res = client.chat("gemini-1.5-flash", "your question")
+print(gem_res)
+​```
+
+## Params Explain
+
+- `model_name`: Specify target LLM model
+- `prompt`: Input query for model generation
+- `Return`: Raw text output from LLM
