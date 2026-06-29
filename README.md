@@ -1,6 +1,7 @@
 ## Install Dependencies
 ```bash
 pip install openai google-generativeai
+```
 ## Env Config
 ```Bash
 # Mac / Linux
