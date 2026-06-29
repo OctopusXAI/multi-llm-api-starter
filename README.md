@@ -2,6 +2,7 @@
 ```bash
 pip install openai google-generativeai
 ```
+Env Config
 ```# Mac / Linux
 export OPENAI_API_KEY=your_key_here
 export GEMINI_API_KEY=your_key_here
@@ -10,6 +11,7 @@ export GEMINI_API_KEY=your_key_here
 set OPENAI_API_KEY=your_key_here
 set GEMINI_API_KEY=your_key_here
 ```
+Local Client Usage (unified_llm_client.py)
 ```from unified_llm_client import UnifiedLLMClient
 
 client = UnifiedLLMClient()
