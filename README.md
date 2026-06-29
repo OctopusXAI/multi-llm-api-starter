@@ -1,4 +1,3 @@
-```markdown
 ## Install Dependencies
 ```bash
 pip install openai google-generativeai
