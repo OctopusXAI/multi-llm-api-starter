@@ -30,7 +30,8 @@ gem_res = client.chat("gemini-1.5-flash", "your question")
 print(gem_res)
 ```
 
-## Params Explain
+## Params Explain``` 
 - model_name: Specify target LLM model
 - prompt: Input query for model generation
 - Return: Raw text output from LLM
+``` 
