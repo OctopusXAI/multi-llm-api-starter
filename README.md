@@ -2,10 +2,7 @@
 ```bash
 pip install openai google-generativeai
 ```
-## Env Config
-```
-bath
-# Mac / Linux
+```# Mac / Linux
 export OPENAI_API_KEY=your_key_here
 export GEMINI_API_KEY=your_key_here
 
@@ -13,9 +10,7 @@ export GEMINI_API_KEY=your_key_here
 set OPENAI_API_KEY=your_key_here
 set GEMINI_API_KEY=your_key_here
 ```
-## Local Client Usage (unified_llm_client.py)
-```
-from unified_llm_client import UnifiedLLMClient
+```from unified_llm_client import UnifiedLLMClient
 
 client = UnifiedLLMClient()
 
@@ -27,9 +22,7 @@ print(gpt_res)
 gem_res = client.chat("gemini-1.5-flash", "your question")
 print(gem_res)
 ```
-
-## Params Explain
-
-- `model_name`: Specify target LLM model
-- `prompt`: Input query for model generation
-- `Return`: Raw text output from LLM
+Params Explain
+model_name: Specify target LLM model
+prompt: Input query for model generation
+Return: Raw text output from LLM
